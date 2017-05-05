@@ -21,7 +21,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        statusItem.title = "HornDog"
+        statusItem.menu = statusMenu
+        
+        let icon = NSImage(named: "statusIcon")
+        statusItem.image = icon
         statusItem.menu = statusMenu
     }
 
